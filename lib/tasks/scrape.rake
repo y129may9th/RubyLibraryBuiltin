@@ -1,2 +1,0 @@
-namespace :scrape do
-end
