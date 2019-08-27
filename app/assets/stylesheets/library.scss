@@ -1,3 +1,20 @@
-// Place all the styles related to the Library controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 50px;
+  font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+
+}
+
+.btn-wrap {
+  text-align:center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 40px;
+  text-decoration: none;
+  background: #FFE019;/*ボタン色*/
+  color: #052019;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}

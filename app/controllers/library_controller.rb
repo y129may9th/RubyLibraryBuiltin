@@ -3,9 +3,6 @@ require 'open-uri'
 
 class LibraryController < ApplicationController
 
-  def top
-  end
-
   def get
     url = 'https://docs.ruby-lang.org/ja/2.6.0/library/_builtin.html'
 
@@ -19,7 +16,9 @@ class LibraryController < ApplicationController
     @library_url = []
     doc = Nokogiri::HTML.parse(html, nil, charset)
     doc.xpath('//td[@class="signature"]').each do |node|
-    @library_url << node.css('a').attribute('href').value
+    ahead_url = 'https://docs.ruby-lang.org/ja/2.6.0'
+    relative_path = node.css('a').attribute('href').value.sub(/../, '')
+    @library_url << ahead_url + relative_path
     end
   end
 end
